@@ -12,4 +12,5 @@
  * @package         Acf_Advanced_Shortcode
  */
 
-// Your code starts here.
+require_once('lib/fns/shortcodes.php');
+require_once('lib/fns/utilities.php');

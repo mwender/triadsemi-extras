@@ -1,0 +1,19 @@
+/* Flexible Content CSS */
+.flexible-content h3.title{
+  color: #54595f;
+  font-family: 'Roboto', Sans-serif;
+  font-weight: 600;
+}
+.flexible-content .flexible-content-row{
+  padding: 0 0 20px 0;
+}
+.flexible-content .flexible-content-row:first-child{
+  margin-top: -10px;
+}
+.flexible-content .flexible-content-image img{
+  display: block;
+  margin: 0 auto;
+}
+.product-highlights .highlight{
+  padding: 20px 0;
+}
