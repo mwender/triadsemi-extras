@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 
 		addtextdomain: {
 			options: {
-				textdomain: 'acf-advanced-shortcode',
+				textdomain: 'triadsemi-extras',
 			},
 			update_all_domains: {
 				options: {
@@ -32,8 +32,8 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: '/languages',
 					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
-					mainFile: 'acf-advanced-shortcode.php',
-					potFilename: 'acf-advanced-shortcode.pot',
+					mainFile: 'triadsemi-extras.php',
+					potFilename: 'triadsemi-extras.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true

@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name:     ACF Advanced Shortcode
+ * Plugin Name:     TriadSemi Extras
  * Plugin URI:      PLUGIN SITE HERE
- * Description:     Handles shortcode output for advanced ACF field groups.
+ * Description:     Extra features for the TriadSemi website.
  * Author:          TheWebist
  * Author URI:      https://mwender.com
- * Text Domain:     acf-advanced-shortcode
+ * Text Domain:     triadsemi-extras
  * Domain Path:     /languages
  * Version:         0.1.0
  *
- * @package         Acf_Advanced_Shortcode
+ * @package         Triadsemi_Extras
  */
 
 require_once('lib/fns/shortcodes.php');
