@@ -24,7 +24,8 @@ function acf_shortcode( $atts ){
 
     case 'range':
       if( 'product_image_width' == $field['name'] ){
-        $html = '<style type="text/css">#chip-image img{width: ' . $field['value'] . '%;}</style>';
+        $value = ( empty( $field['value'] ) || 0 === $field['value'] )? 50 : $field['value'] ;
+        $html = '<style type="text/css">#chip-image img{width: ' . $value . '%;}</style>';
       }
       break;
 
