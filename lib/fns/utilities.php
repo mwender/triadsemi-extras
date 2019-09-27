@@ -1,6 +1,6 @@
 <?php
 
-namespace ACFAdvanced\utilities;
+namespace TriadSemi\utilities;
 
 function format_flexible_content( $content_rows = [] ){
   if( ! is_array( $content_rows ) || 0 === count( $content_rows ) )

@@ -12,5 +12,6 @@
  * @package         Triadsemi_Extras
  */
 
+require_once('lib/fns/enqueues.php');
 require_once('lib/fns/shortcodes.php');
 require_once('lib/fns/utilities.php');

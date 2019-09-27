@@ -1,6 +1,6 @@
 <?php
 
-namespace ACFAdvanced\shortcodes;
+namespace TriadSemi\shortcodes;
 
 function acf_shortcode( $atts ){
   $args = shortcode_atts( [
@@ -19,7 +19,7 @@ function acf_shortcode( $atts ){
   switch( $field['type'] ){
     case 'flexible_content':
       if( is_array( $field['value'] ) )
-        $html = \ACFAdvanced\utilities\format_flexible_content( $field['value'] );
+        $html = \TriadSemi\utilities\format_flexible_content( $field['value'] );
       break;
 
     case 'range':
@@ -34,7 +34,7 @@ function acf_shortcode( $atts ){
         foreach( $field['value'] as $item ){
           $list[] = $item['detail'];
         }
-        $html = \ACFAdvanced\utilities\format_list( $list );
+        $html = \TriadSemi\utilities\format_list( $list );
       }
       break;
 
@@ -46,6 +46,15 @@ function acf_shortcode( $atts ){
 }
 add_shortcode( 'acfadvanced', __NAMESPACE__  . '\\acf_shortcode' );
 
+/**
+ * Outputs the Product Selector table
+ *
+ * @param      array  $atts {
+ *
+ * }
+ *
+ * @return     html   The html for the product selector table.
+ */
 function product_selector( $atts ){
   $products = wc_get_products([
     'limit'       => -1,
@@ -59,7 +68,9 @@ function product_selector( $atts ){
       $rows[] = '	<tr><td><a href="' . get_permalink( $product->get_id() ) . '">' . $product->get_name() . '</a></td><td>' . $product->get_categories() . '</td><td>' . get_field( 'sub_title', $product->get_id() ) . '</td></tr>';
     }
   }
+  wp_enqueue_style( 'datatables' );
+  wp_enqueue_script( 'datatables-init' );
 
-  return '<table class="striped"><thead><tr><th style="width: 15%;">Triad Part Number</th><th style="width: 25%;">Market</th><th style="width: 60%;">Description</th></tr></thead><tbody>' . implode( '', $rows ) . '</tbody></table>';
+  return '<table class="striped" id="productselector"><thead><tr><th style="width: 15%;">Triad Part Number</th><th style="width: 25%;">Market</th><th style="width: 60%;">Description</th></tr></thead><tbody>' . implode( '', $rows ) . '</tbody></table>';
 }
 add_shortcode( 'productselector', __NAMESPACE__ . '\\product_selector' );
