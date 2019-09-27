@@ -8,6 +8,7 @@ function format_flexible_content( $content_rows = [] ){
 
   $html = '';
   $x = 0;
+  $content = '';
   foreach( $content_rows as $row ){
     if( 0 < $x )
       $html.= '<div class="elementor-element elementor-element-3b17d2a elementor-widget elementor-widget-divider" data-id="3b17d2a" data-element_type="widget" data-widget_type="divider.default"><div class="elementor-widget-container"><span class="elementor-divider-separator"></span></div></div>';
@@ -58,6 +59,33 @@ function format_flexible_content( $content_rows = [] ){
           }
         }
         $content = '<div class="product-highlights">' . $content . '</div>';
+        break;
+
+      case 'column_content':
+        // Get our column width
+        $no_of_cols = count( $row['columns'] );
+        $col_widths = [1 => 100, 2 => 50, 3 => 33, 4 => 25];
+        $col_width = $col_widths[$no_of_cols];
+
+        // Load the templates
+        $section_template = file_get_contents( plugin_dir_path(__FILE__) . '../templates/columns-section.html' );
+        $column_template = file_get_contents( plugin_dir_path(__FILE__) . '../templates/column.html' );
+
+        // Build the columns
+        $col_html = '';
+        foreach( $row['columns'] as $column ){
+          $search = ['{{col_width}}','{{image}}','{{title}}','{{text}}'];
+          $replace = [
+            $col_width,
+            '<img src="' . $column['image']['url'] . '" />',
+            $column['title'],
+            apply_filters( 'the_content',  $column['text'] ),
+          ];
+          $col_html.= str_replace( $search, $replace, $column_template );
+        }
+
+        // Add the columns to the section
+        $content = str_replace( '{{columns}}', $col_html, $section_template );
         break;
 
       case 'related_products':
