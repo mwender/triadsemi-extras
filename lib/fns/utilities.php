@@ -11,7 +11,7 @@ function format_flexible_content( $content_rows = [] ){
   $content = '';
   foreach( $content_rows as $row ){
     if( 0 < $x )
-      $html.= '<div class="elementor-element elementor-element-3b17d2a elementor-widget elementor-widget-divider" data-id="3b17d2a" data-element_type="widget" data-widget_type="divider.default"><div class="elementor-widget-container"><span class="elementor-divider-separator"></span></div></div>';
+      $html.= '<div class="elementor-element elementor-widget elementor-widget-divider" data-element_type="widget" data-widget_type="divider.default"><div class="elementor-widget-container"><span class="elementor-divider-separator"></span></div></div>';
     $x++;
 
     switch( $row['acf_fc_layout'] ){
@@ -44,9 +44,15 @@ function format_flexible_content( $content_rows = [] ){
         break;
 
       case 'product_highlights':
+      case 'market_highlights':
         error_log('$row = ' . print_r($row,true));
-        $template_left = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/product-highlight_left.html' );
-        $template_right = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/product-highlight_right.html' );
+        if( 'product_highlights' == $row['acf_fc_layout'] ){
+          $template_left = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/product-highlight_left.html' );
+          $template_right = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/product-highlight_right.html' );
+        } else {
+          $template_left = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/market-highlight_left.html' );
+          $template_right = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/market-highlight_right.html' );
+        }
         $x = 0;
         if( is_array( $row['highlight'] ) && 0 < count( $row['highlight'] ) ){
           $content = '';

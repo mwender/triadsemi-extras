@@ -13,5 +13,7 @@
  */
 
 require_once('lib/fns/enqueues.php');
+require_once('lib/fns/gravityforms.php');
 require_once('lib/fns/shortcodes.php');
+require_once('lib/fns/template_redirect.php');
 require_once('lib/fns/utilities.php');

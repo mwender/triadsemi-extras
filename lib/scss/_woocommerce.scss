@@ -1,0 +1,14 @@
+/* WooCommerce Styling */
+.hero-unit .elementor-shortcode{
+  .elementor-widget-text-editor{
+    color: #fff;
+
+    h1{
+      font-weight: 600;
+    }
+    h1 + h2{
+      margin-top: -14px;
+      font-weight: 300;
+    }
+  }
+}
