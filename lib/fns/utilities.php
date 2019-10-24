@@ -20,7 +20,7 @@ function format_flexible_content( $content_rows = [] ){
         if( is_array( $row['_products'] ) && 0 < count( $row['_products'] ) ){
           $content = '<h3 class="title">' . $row['section_title'] . '</h3>';
           foreach( $row['_products'] as $product ){
-            //error_log('$product[product] = ' . print_r( $product['product'], true ) );
+            //uber_log('$product[product] = ' . print_r( $product['product'], true ) );
             $product = $product['product'];
             $search = [
               '{{title}}',
@@ -45,7 +45,7 @@ function format_flexible_content( $content_rows = [] ){
 
       case 'product_highlights':
       case 'market_highlights':
-        error_log('$row = ' . print_r($row,true));
+        //uber_log('$row = ' . print_r($row,true));
         if( 'product_highlights' == $row['acf_fc_layout'] ){
           $template_left = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/product-highlight_left.html' );
           $template_right = file_get_contents( plugin_dir_path( __FILE__ ) . '../templates/product-highlight_right.html' );
@@ -117,8 +117,7 @@ function format_flexible_content( $content_rows = [] ){
     $html.= '<div class="flexible-content-row">' . $content . '</div>';
   }
 
-  $css = file_get_contents( plugin_dir_path( __FILE__ ) . '../css/flexible-content.css' );
-  return '<div class="flexible-content">' . $html . '</div><style type="text/css">' . $css . '</style>';
+  return '<div class="flexible-content">' . $html . '</div>';
 }
 
 function format_list( $list = [] ){
