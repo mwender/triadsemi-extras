@@ -3,14 +3,8 @@
 namespace TriadSemi\enqueues;
 
 function enqueue_scripts(){
-  error_log('site_url = ' . get_site_url() );
-  $site_url = get_site_url();
-  $dev_servers = ['https://triadsemibeta.local','https://localhost:3000'];
-  if( in_array( $site_url, $dev_servers ) ){
-    wp_enqueue_style( 'triadsemi-extras', plugin_dir_url( __FILE__ ) . '../css/main.css', null, plugin_dir_path( __FILE__ ) . '../css/main.css' );
-  } else {
-    wp_enqueue_style( 'triadsemi-extras', plugin_dir_url( __FILE__ ) . '../dist/main.css', null, plugin_dir_path( __FILE__ ) . '../dist/main.css' );
-  }
+  $css_dir = ( stristr( site_url(), '.local' ) || SCRIPT_DEBUG )? 'css' : 'dist' ;
+  wp_enqueue_style( 'triadsemi-extras', plugin_dir_url( __FILE__ ) . '../' . $css_dir . '/main.css', ['hello-elementor','elementor-frontend','woocommerce-general'], plugin_dir_path( __FILE__ ) . '../' . $css_dir . '/main.css' );
 
   wp_register_script( 'datatables', '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js', ['jquery'], '1.10.19', true );
   wp_register_script( 'datatables-init', plugin_dir_url( __FILE__ ) . '../js/datatables-init.js', ['datatables'], filemtime( plugin_dir_path( __FILE__ ) . '../js/datatables-init.js' ), true );
