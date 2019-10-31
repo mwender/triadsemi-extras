@@ -1,0 +1,21 @@
+{% if bulk_discounts is not empty %}
+  <table class="table table-sm table-striped table-discounts">
+    <thead>
+      <tr>
+        <th style="font-size: 14px;">Price Break</th>
+        <th style="font-size: 14px;">Unit Price</th>
+        <th style="text-align: right; font-size: 14px;">Extended Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for discount in bulk_discounts %}
+      {% set unitprice = baseprice - discount.discount %}
+      <tr>
+        <td>{{ discount.quantity }}+</td>
+        <td>{{ unitprice|number_format(2) }}</td>
+        <td style="text-align: right;">${{ (discount.quantity * unitprice)|number_format(2) }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

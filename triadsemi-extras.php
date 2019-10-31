@@ -12,6 +12,14 @@
  * @package         Triadsemi_Extras
  */
 
+/* Load Composer Dependencies */
+require_once('vendor/autoload.php');
+$loader = new \Twig\Loader\FilesystemLoader( plugin_dir_path( __FILE__ ) . 'lib/templates/twig');
+$twig = new \Twig\Environment( $loader, [
+  'cache' => plugin_dir_path( __FILE__ ) . 'lib/templates/twig/cache'
+]);
+
+/* Load Project Dependencies */
 require_once('lib/fns/enqueues.php');
 require_once('lib/fns/gravityforms.php');
 require_once('lib/fns/shortcodes.php');
