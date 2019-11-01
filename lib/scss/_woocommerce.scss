@@ -15,8 +15,15 @@ div.woocommerce-notices-wrapper{
         display: none;
     }
 }
-.woocommerce-cart .input-text.qty{
-    padding: 8px 0 8px 8px;
+.woocommerce-cart
+.woocommerce-cart{
+  .input-text.qty{
+      padding: 8px 0 8px 8px;
+  }
+  table.cart td.actions .coupon #coupon_code{
+    padding: 3px;
+    width: 180px;
+  }
 }
 
 .hero-unit .elementor-shortcode{
