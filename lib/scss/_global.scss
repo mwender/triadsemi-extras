@@ -1,4 +1,16 @@
 /* Global Styles */
+a{
+  color: $triadBlue;
+}
+
 .elementor-shortcode{
   color: $textColor;
+}
+
+table{
+    td{
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
 }
