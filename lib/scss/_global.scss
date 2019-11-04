@@ -14,3 +14,33 @@ table{
         }
     }
 }
+
+/* Password Protected Page/Post */
+.post-password-form{
+  margin: 100px auto;
+  width: 90%;
+  max-width: 600px;
+
+  p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    label{
+      display: flex;
+      align-items: center;
+
+      input{
+        margin: 0 8px;
+      }
+    }
+
+    input[type="submit"]{
+      background-color: $triadBlue;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 0;
+    }
+  }
+}
