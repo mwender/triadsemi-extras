@@ -25,6 +25,7 @@ require_once('lib/fns/gravityforms.php');
 require_once('lib/fns/shortcodes.php');
 require_once('lib/fns/template_redirect.php');
 require_once('lib/fns/utilities.php');
+require_once('lib/fns/waitlist-to-kickfire.php');
 require_once('lib/fns/woocommerce.php');
 
 function uber_log( $message = null ){
