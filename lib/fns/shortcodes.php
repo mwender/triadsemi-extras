@@ -88,6 +88,7 @@ function product_selector( $atts ){
     'orderby'     => 'title',
     'order'       => 'ASC',
     'visibility'  => 'catalog',
+    'status'      => 'publish',
   ];
 
   if( ! is_null( $args['category'] ) ){
