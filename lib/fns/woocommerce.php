@@ -39,7 +39,7 @@ function price_breaks( $atts ){
 
   // Get discounts
   if( 'yes' == get_post_meta( $post->ID, '_bulkdiscount_enabled', true ) && class_exists( 'Woo_Bulk_Discount_Plugin_t4m' ) ){
-    error_log("\n\n" . 'Calculating bulk discounts...');
+    uber_log("\n\n" . 'Calculating bulk discounts...');
 
     if( 'fixed' != get_option( 'woocommerce_t4m_discount_type' ) )
       return;
@@ -63,3 +63,30 @@ function price_breaks( $atts ){
   return $twig->render('pricing-table.twig', $context );
 }
 add_shortcode( 'price_breaks', __NAMESPACE__ . '\\price_breaks' );
+
+/**
+ * Additional WC Order processing after the order has been submitted.
+ *
+ * We use this to process orders with the `SAMPLEREQ` coupon code.
+ *
+ * @param      int  $order_id  The order ID
+ */
+function process_order( $order_id ){
+  $order = new \WC_Order( $order_id );
+  $coupons = $order->get_coupon_codes();
+
+  foreach( $coupons as $coupon_code ){
+    switch ( strtolower( $coupon_code ) ) {
+      case 'samplereq':
+        // If we're using the `SAMPLEREQ` coupon,
+        // update the order's status to `Sample Request`:
+        $order->update_status('sample-request');
+        break;
+
+      default:
+        uber_log('ℹ️ process_order() has no logic for `' . $coupon_code . '` coupon code.');
+        break;
+    }
+  }
+}
+add_action( 'woocommerce_thankyou', __NAMESPACE__ . '\\process_order' );
