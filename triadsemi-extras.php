@@ -1,15 +1,16 @@
 <?php
 /**
- * Plugin Name:     TriadSemi Extras
- * Plugin URI:      https://github.com/mwender/triadsemi-extras
- * Description:     Extra features for the TriadSemi website.
- * Author:          TheWebist
- * Author URI:      https://mwender.com
- * Text Domain:     triadsemi-extras
- * Domain Path:     /languages
- * Version:         1.0.0
+ * Plugin Name:       TriadSemi Extras
+ * Plugin URI:        https://github.com/mwender/triadsemi-extras
+ * GitHub Plugin URI: https://github.com/mwender/triadsemi-extras
+ * Description:       Extra features for the TriadSemi website.
+ * Author:            TheWebist
+ * Author URI:        https://mwender.com
+ * Text Domain:       triadsemi-extras
+ * Domain Path:       /languages
+ * Version:           1.0.0
  *
- * @package         Triadsemi_Extras
+ * @package           Triadsemi_Extras
  */
 
 /* Load Composer Dependencies */
