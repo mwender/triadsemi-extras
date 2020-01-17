@@ -109,7 +109,7 @@ function product_selector( $atts ){
 
   if( $products ){
     foreach( $products as $product ){
-      $cat_column = ( ! $args['tag'] && ! is_product_category() )? '<td>' . $product->get_categories() . '</td>' : '' ;
+      $cat_column = ( ! $args['tag'] && ! is_product_category() )? '<td>' . wc_get_product_category_list( $product->get_id() ) . '</td>' : '' ;
       $rows[] = '	<tr><td><a href="' . get_permalink( $product->get_id() ) . '">' . $product->get_name() . '</a></td>' . $cat_column . '<td>' . get_field( 'sub_title', $product->get_id() ) . '</td></tr>';
     }
   }
