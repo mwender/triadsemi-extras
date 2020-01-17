@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:     TriadSemi Extras
- * Plugin URI:      PLUGIN SITE HERE
+ * Plugin URI:      https://github.com/mwender/triadsemi-extras
  * Description:     Extra features for the TriadSemi website.
  * Author:          TheWebist
  * Author URI:      https://mwender.com
  * Text Domain:     triadsemi-extras
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         1.0.0
  *
  * @package         Triadsemi_Extras
  */
@@ -28,6 +28,11 @@ require_once('lib/fns/utilities.php');
 require_once('lib/fns/waitlist-to-kickfire.php');
 require_once('lib/fns/woocommerce.php');
 
+/**
+ * Provides enhanced error logging.
+ *
+ * @param      string  $message  The message
+ */
 function uber_log( $message = null ){
   static $counter = 1;
 
