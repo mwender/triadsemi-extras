@@ -30,9 +30,9 @@ function format_flexible_content( $content_rows = [] ){
             ];
             $replace = [
               $product->post_title,
-              get_permalink( $product->get_id() ),
-              apply_filters( 'the_content', get_the_content( null, null, $product->get_id() ) ),
-              get_the_post_thumbnail( $product->get_id(), 'full' )
+              get_permalink( $product->ID ),
+              apply_filters( 'the_content', get_the_content( null, null, $product->ID ) ),
+              get_the_post_thumbnail( $product->ID, 'full' )
             ];
             $content.= str_replace( $search, $replace, $template );
           }
@@ -97,7 +97,7 @@ function format_flexible_content( $content_rows = [] ){
       case 'related_products':
         $table_rows = [];
         foreach( $row['products'] as $product ){
-          $table_rows[] = '<tr><td><a href="' . get_permalink( $product->get_id() ) . '">' . $product->post_title . '</a></td><td>' . get_field( 'sub_title', $product->get_id() ) . '</td></tr>';
+          $table_rows[] = '<tr><td><a href="' . get_permalink( $product->ID ) . '">' . $product->post_title . '</a></td><td>' . get_field( 'sub_title', $product->ID ) . '</td></tr>';
         }
         $content = '<h3 class="title">Related Products</h3><table class="striped"><thead><tr><th style="width: 30%">Triad Part Number</th><th style="width: 70%">Description</th></tr></thead><tbody>' . implode( '', $table_rows ) . '</tbody></table>';
         break;
