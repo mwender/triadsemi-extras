@@ -2,6 +2,24 @@
 
 namespace TriadSemi\utilities;
 
+/**
+ * Determines whether the specified post has been built with Elementor.
+ *
+ * @param      int   $post_id  The post ID
+ *
+ * @return     boolean  True if the post has Elementor enabled, False otherwise.
+ */
+function is_elementor( $post_id ){
+  return \Elementor\Plugin::$instance->db->is_built_with_elementor( $post_id );
+}
+
+/**
+ * Formats ACF Flexible Content field data.
+ *
+ * @param      array           $content_rows  The content rows
+ *
+ * @return     boolean|string  ( description_of_the_return_value )
+ */
 function format_flexible_content( $content_rows = [] ){
   if( ! is_array( $content_rows ) || 0 === count( $content_rows ) )
     return false;
@@ -22,18 +40,8 @@ function format_flexible_content( $content_rows = [] ){
           foreach( $row['_products'] as $product ){
             //uber_log('$product[product] = ' . print_r( $product['product'], true ) );
             $product = $product['product'];
-            $search = [
-              '{{title}}',
-              '{{link}}',
-              '{{content}}',
-              '{{image}}'
-            ];
-            $replace = [
-              $product->post_title,
-              get_permalink( $product->ID ),
-              apply_filters( 'the_content', get_the_content( null, null, $product->ID ) ),
-              get_the_post_thumbnail( $product->ID, 'full' )
-            ];
+            $search = ['{{title}}', '{{link}}', '{{content}}', '{{image}}'];
+            $replace = [ $product->post_title, get_permalink( $product->ID ), get_the_excerpt( $product->ID ), get_the_post_thumbnail( $product->ID, 'full' ) ];
             $content.= str_replace( $search, $replace, $template );
           }
         }
