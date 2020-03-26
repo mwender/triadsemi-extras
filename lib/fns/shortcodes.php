@@ -131,6 +131,11 @@ function product_selector( $atts ){
 }
 add_shortcode( 'productselector', __NAMESPACE__ . '\\product_selector' );
 
+/**
+ * Adds scroll offset JS.
+ *
+ * @return     string  Scroll Offset JS embed.
+ */
 function scroll_offset_js(){
   $scroll_offset_js = file_get_contents( plugin_dir_path( __FILE__ ) . '../js/scroll-offset.js' );
   return "<script type=\"text/javascript\">\n{$scroll_offset_js}\n</script>";
