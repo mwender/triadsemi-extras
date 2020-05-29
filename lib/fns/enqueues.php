@@ -4,7 +4,12 @@ namespace TriadSemi\enqueues;
 
 function enqueue_scripts(){
   $css_dir = ( stristr( site_url(), '.local' ) || SCRIPT_DEBUG )? 'css' : 'dist' ;
-  wp_enqueue_style( 'triadsemi-extras', plugin_dir_url( __FILE__ ) . '../' . $css_dir . '/main.css', ['hello-elementor','elementor-frontend','woocommerce-general'], plugin_dir_path( __FILE__ ) . '../' . $css_dir . '/main.css' );
+  wp_enqueue_style(
+    'triadsemi-extras',
+    plugin_dir_url( __FILE__ ) . '../' . $css_dir . '/main.css',
+    ['hello-elementor','elementor-frontend','woocommerce-general'],
+    filemtime( plugin_dir_path( __FILE__ ) . '../' . $css_dir . '/main.css' )
+  );
 
   wp_register_script( 'datatables', '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js', ['jquery'], '1.10.19', true );
   wp_register_script( 'datatables-init', plugin_dir_url( __FILE__ ) . '../js/datatables-init.js', ['datatables'], filemtime( plugin_dir_path( __FILE__ ) . '../js/datatables-init.js' ), true );
