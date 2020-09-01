@@ -19,7 +19,6 @@ define( 'TS_XTRAS_DIR_URL', plugin_dir_url( __FILE__ ) );
 require_once('vendor/autoload.php');
 $loader = new \Twig\Loader\FilesystemLoader( plugin_dir_path( __FILE__ ) . 'lib/templates/twig');
 $filter = new \Twig\TwigFilter('shortcodes', function( $string ){
-  uber_log('string = ' . $string );
   return do_shortcode( $string );
 });
 $twig = new \Twig\Environment( $loader, [
