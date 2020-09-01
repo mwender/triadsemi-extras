@@ -8,17 +8,24 @@
  * Author URI:        https://mwender.com
  * Text Domain:       triadsemi-extras
  * Domain Path:       /languages
- * Version:           1.0.1
+ * Version:           1.1.0
  *
  * @package           Triadsemi_Extras
  */
+define( 'TS_XTRAS_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'TS_XTRAS_DIR_URL', plugin_dir_url( __FILE__ ) );
 
 /* Load Composer Dependencies */
 require_once('vendor/autoload.php');
 $loader = new \Twig\Loader\FilesystemLoader( plugin_dir_path( __FILE__ ) . 'lib/templates/twig');
+$filter = new \Twig\TwigFilter('shortcodes', function( $string ){
+  uber_log('string = ' . $string );
+  return do_shortcode( $string );
+});
 $twig = new \Twig\Environment( $loader, [
   'cache' => plugin_dir_path( __FILE__ ) . 'lib/templates/twig/cache'
 ]);
+$twig->addFilter($filter);
 
 /* Load Project Dependencies */
 require_once('lib/fns/enqueues.php');

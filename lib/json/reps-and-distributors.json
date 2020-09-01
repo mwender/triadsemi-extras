@@ -1,0 +1,417 @@
+[
+  {
+    "region": "Alabama",
+    "abbr": "AL",
+    "contacts": "[include file=reps/rep_performancetech][include file=reps/rep_performancetech-al]"
+  },
+  {
+    "region": "Alaska",
+    "abbr": "AK",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Arizona",
+    "abbr": "AZ",
+    "contacts": "[include file=reps/rep_techcoast]"
+  },
+  {
+    "region": "Arkansas",
+    "abbr": "AR",
+    "contacts": "[include file=reps/rep_tristar-group]"
+  },
+  {
+    "region": "California",
+    "abbr": "CA",
+    "contacts": "[include file=reps/rep_california.html]"
+  },
+  {
+    "region": "Colorado",
+    "abbr": "CO",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Connecticut",
+    "abbr": "CT",
+    "contacts": "[include file=reps/rep_innovative-applied-solutions.html]"
+  },
+  {
+    "region": "Delaware",
+    "abbr": "DE",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Florida",
+    "abbr": "FL",
+    "contacts": "[include file=reps/rep_millennium-alliance-fl]"
+  },
+  {
+    "region": "Georgia",
+    "abbr": "GA",
+    "contacts": "[include file=reps/rep_performancetech-georgia]"
+  },
+  {
+    "region": "Hawaii",
+    "abbr": "HI",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Idaho",
+    "abbr": "ID",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Illinois",
+    "abbr": "IL",
+    "contacts": "[include file=reps/rep_oasis-sales-corp]Territory: Northern IL<br /><br />[include file=reps/rep_triad]Territory: Southern IL"
+  },
+  {
+    "region": "Indiana",
+    "abbr": "IN",
+    "contacts": "[include file=reps/rep_millennium-alliance]"
+  },
+  {
+    "region": "Iowa",
+    "abbr": "IA",
+    "contacts": "[include file=reps/rep_cahill-schmitz-cahill]"
+  },
+  {
+    "region": "Kansas",
+    "abbr": "KS",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Kentucky",
+    "abbr": "KY",
+    "contacts": "[include file=reps/rep_millennium-alliance]"
+  },
+  {
+    "region": "Louisiana",
+    "abbr": "LA",
+    "contacts": "[include file=reps/rep_tristar-group]"
+  },
+  {
+    "region": "Maine",
+    "abbr": "ME",
+    "contacts": "[include file=reps/rep_innovative-applied-solutions.html]"
+  },
+  {
+    "region": "Maryland",
+    "abbr": "MD",
+    "contacts": "[include file=reps/rep_sj-associates]Territory includes DC."
+  },
+  {
+    "region": "Massachusetts",
+    "abbr": "MA",
+    "contacts": "[include file=reps/rep_innovative-applied-solutions.html]"
+  },
+  {
+    "region": "Michigan",
+    "abbr": "MI",
+    "contacts": "[include file=reps/rep_millennium-alliance]"
+  },
+  {
+    "region": "Minnesota",
+    "abbr": "MN",
+    "contacts": "[include file=reps/rep_csc-mn]"
+  },
+  {
+    "region": "Mississippi",
+    "abbr": "MS",
+    "contacts": "[include file=reps/rep_performancetech][include file=reps/rep_performancetech-ms][include file=reps/rep_triad]"
+  },
+  {
+    "region": "Missouri",
+    "abbr": "MO",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Montana",
+    "abbr": "MT",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Nebraska",
+    "abbr": "NE",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Nevada",
+    "abbr": "NV",
+    "contacts": "[include file=reps/rep_triad]Territory: Southern NV\n\n[include file=reps/rep_taarcom]Territory: Northen NV\n\n[include file=reps/rep_techcoast]Territory: Clark County, NV"
+  },
+  {
+    "region": "New Hampshire",
+    "abbr": "NH",
+    "contacts": "[include file=reps/rep_innovative-applied-solutions.html]"
+  },
+  {
+    "region": "New Jersey",
+    "abbr": "NJ",
+    "contacts": "[include file=reps/rep_mechtronics-sales_nj]"
+  },
+  {
+    "region": "New Mexico",
+    "abbr": "NM",
+    "contacts": "[include file=reps/rep_techcoast]"
+  },
+  {
+    "region": "New York",
+    "abbr": "NY",
+    "contacts": "[include file=reps/rep_mechtronics-sales_ny][include file=reps/rep_fjm-associates]Territory: Upstate New York"
+  },
+  {
+    "region": "North Carolina",
+    "abbr": "NC",
+    "contacts": "[include file=reps/rep_performancetech][include file=reps/rep_performancetech-nc]"
+  },
+  {
+    "region": "North Dakota",
+    "abbr": "ND",
+    "contacts": "[include file=reps/rep_csc-mn]"
+  },
+  {
+    "region": "Ohio",
+    "abbr": "OH",
+    "contacts": "[include file=reps/rep_millennium-alliance]"
+  },
+  {
+    "region": "Oklahoma",
+    "abbr": "OK",
+    "contacts": "[include file=reps/rep_tristar-group]"
+  },
+  {
+    "region": "Oregon",
+    "abbr": "OR",
+    "contacts": "[include file=reps/rep_epic-or.html]"
+  },
+  {
+    "region": "Pennsylvania",
+    "abbr": "PA",
+    "contacts": "[include file=reps/rep_mechtronics-sales_pa][include file=reps/rep_millennium-alliance]Territory: Western Pennsylvania"
+  },
+  {
+    "region": "Rhode Island",
+    "abbr": "RI",
+    "contacts": "[include file=reps/rep_innovative-applied-solutions.html]"
+  },
+  {
+    "region": "South Carolina",
+    "abbr": "SC",
+    "contacts": "[include file=reps/rep_performancetech][include file=reps/rep_performancetech-sc]"
+  },
+  {
+    "region": "South Dakota",
+    "abbr": "SD",
+    "contacts": "[include file=reps/rep_csc-mn]"
+  },
+  {
+    "region": "Tennessee",
+    "abbr": "TN",
+    "contacts": "[include file=reps/rep_performancetech][include file=reps/rep_performancetech-tn]"
+  },
+  {
+    "region": "Texas",
+    "abbr": "TX",
+    "contacts": "[include file=reps/rep_tristar-group-tx]"
+  },
+  {
+    "region": "Utah",
+    "abbr": "UT",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Vermont",
+    "abbr": "VT",
+    "contacts": "[include file=reps/rep_innovative-applied-solutions.html]"
+  },
+  {
+    "region": "Virginia",
+    "abbr": "VA",
+    "contacts": "[include file=reps/rep_sj-associates]Territory includes DC."
+  },
+  {
+    "region": "Washington",
+    "abbr": "WA",
+    "contacts": "[include file=reps/rep_epic-wa]"
+  },
+  {
+    "region": "West Virginia",
+    "abbr": "WV",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "Wisconsin",
+    "abbr": "WI",
+    "contacts": "[include file=reps/rep_csc-mn]Territory: Western WI<br/><br />[include file=reps/rep_oasis-sales-corp]Territory: Eastern WI"
+  },
+  {
+    "region": "Wyoming",
+    "abbr": "WY",
+    "contacts": "[include file=reps/rep_triad]"
+  },
+  {
+    "region": "District of Columbia",
+    "abbr": "DC",
+    "contacts": "[include file=reps/rep_sj-associates]"
+  },
+  {
+    "region": "Alberta",
+    "abbr": "AB",
+    "contacts": "[include file=reps/rep_epic-alberta.html]"
+  },
+  {
+    "region": "British Columbia",
+    "abbr": "BC",
+    "contacts": "[include file=reps/rep_epic-british-columbia.html]"
+  },
+  {
+    "region": "Manitoba",
+    "abbr": "MB",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp]"
+  },
+  {
+    "region": "New Brunswick",
+    "abbr": "NB",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp]"
+  },
+  {
+    "region": "Newfoundland and Labrador",
+    "abbr": "NL",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp][include file=reps/rep_canadian-sygnum-corp-quebec]"
+  },
+  {
+    "region": "Nova Scotia",
+    "abbr": "NT",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp]"
+  },
+  {
+    "region": "Ontario",
+    "abbr": "ON",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp][include file=reps/rep_canadian-sygnum-corp-ontario]"
+  },
+  {
+    "region": "Prince Edward Island",
+    "abbr": "PE",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp]"
+  },
+  {
+    "region": "Quebec",
+    "abbr": "QC",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp][include file=reps/rep_canadian-sygnum-corp-quebec]"
+  },
+  {
+    "region": "Saskatchewan",
+    "abbr": "SK",
+    "contacts": "[include file=reps/rep_canadian-sygnum-corp][include file=reps/rep_canadian-sygnum-corp-alberta]"
+  },
+  {
+    "region": "Israel",
+    "abbr": "IL",
+    "contacts": "[include file=reps/rep_redtree-israel]"
+  },
+  {
+    "region": "United Kingdom",
+    "abbr": "GB",
+    "contacts": "[include file=reps/rep_redtree-uk]"
+  },
+  {
+    "region": "France",
+    "abbr": "FR",
+    "contacts": "[include file=reps/rep_redtree-france]"
+  },
+  {
+    "region": "Spain",
+    "abbr": "ES",
+    "contacts": "[include file=reps/rep_redtree-spain]"
+  },
+  {
+    "region": "Portugal",
+    "abbr": "PT",
+    "contacts": "[include file=reps/rep_redtree-portugal]"
+  },
+  {
+    "region": "Turkey",
+    "abbr": "TR",
+    "contacts": "[include file=reps/rep_redtree-turkey]"
+  },
+  {
+    "region": "Ireland",
+    "abbr": "IE",
+    "contacts": "[include file=reps/rep_redtree-ireland]"
+  },
+  {
+    "region": "Greece",
+    "abbr": "GR",
+    "contacts": "[include file=reps/rep_redtree-greece]"
+  },
+  {
+    "region": "Cyprus",
+    "abbr": "CY",
+    "contacts": "[include file=reps/rep_redtree-cyprus]"
+  },
+  {
+    "region": "Denmark",
+    "abbr": "DK",
+    "contacts": "[include file=reps/rep_redtree-denmark]"
+  },
+  {
+    "region": "Italy",
+    "abbr": "IT",
+    "contacts": "[include file=reps/rep_redtree-italy]"
+  },
+  {
+    "region": "Finland",
+    "abbr": "FI",
+    "contacts": "[include file=reps/rep_redtree-finland]"
+  },
+  {
+    "region": "Mexico",
+    "abbr": "MX",
+    "contacts": "[include file=reps/rep_tristar-group-mex]"
+  },
+  {
+    "region": "Germany",
+    "abbr": "DE",
+    "contacts": "[include file=reps/rep_redtree-germany]"
+  },
+  {
+    "region": "Netherlands",
+    "abbr": "NL",
+    "contacts": "[include file=reps/rep_redtree-netherlands]"
+  },
+  {
+    "region": "Sweden",
+    "abbr": "SE",
+    "contacts": "[include file=reps/rep_redtree-sweden]"
+  },
+  {
+    "region": "Switzerland",
+    "abbr": "CH",
+    "contacts": "[include file=reps/rep_redtree-switzerland]"
+  },
+  {
+    "region": "Belgium",
+    "abbr": "BE",
+    "contacts": "[include file=reps/rep_redtree-belgium]"
+  },
+  {
+    "region": "Norway",
+    "abbr": "NO",
+    "contacts": "[include file=reps/rep_redtree-norway]"
+  },
+  {
+    "region": "Austria",
+    "abbr": "AT",
+    "contacts": "[include file=reps/rep_redtree-austria]"
+  },
+  {
+    "region": "Luxembourg",
+    "abbr": "LU",
+    "contacts": "[include file=reps/rep_redtree-luxembourg]"
+  },
+  {
+    "region": "Worldwide",
+    "abbr": "",
+    "contacts": "[include file=reps/rep_triad]"
+  }
+]

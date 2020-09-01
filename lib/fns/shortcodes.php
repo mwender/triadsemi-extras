@@ -66,6 +66,69 @@ function acf_shortcode( $atts ){
 add_shortcode( 'acfadvanced', __NAMESPACE__  . '\\acf_shortcode' );
 
 /**
+ * Returns HTML stored in lib/templates/
+ *
+ * @since 1.0.0
+ *
+ * @return string Specify the HTML to retrieve.
+ */
+function include_file( $atts ){
+  $args = \shortcode_atts([
+    'file'          => 'name-of-your-html-file',
+    'doshortcodes'  => true,
+    'caption'       => '',
+  ], $atts );
+
+  $filetype = wp_check_filetype( $args['file'], ['html' => 'text/html', 'htm' => 'text/html', 'json' => 'application/json'] );
+
+  if( empty( $filetype['ext'] ) ){
+    $file = TS_XTRAS_DIR_PATH . 'lib/templates/' . $args['file'] . '.html';
+  } else {
+    $file = TS_XTRAS_DIR_PATH . 'lib/templates/' . $args['file'];
+  }
+
+  $return = ( file_exists( $file ) )? file_get_contents( $file ) : '<div class="alert alert-danger"><strong>Shortcode Error:</strong><br/>I could not find <code style="color: #900;">' . basename($file) . '</code>.</div>' ;
+
+  $search = array( '{themedir}','{check}' );
+  $replace = [ \trailingslashit( get_stylesheet_directory_uri() ), '<i class=\"medium fa-check-circle-o fa-2x fa\"></i>' ];
+  $return = str_replace( $search, $replace, $return );
+
+  if( true == $args['doshortcodes'] )
+    $return = \do_shortcode( $return );
+
+  switch ( $filetype['type']) {
+    case 'application/json':
+      $json = json_decode( $return );
+      foreach( $json as $key => $row ){
+        if( $key === 0 ){
+          $skiphead = true;
+          foreach( $row as $cell ){
+            if( ! empty( $cell ) )
+              $skiphead = false;
+          }
+          if( $skiphead )
+            continue;
+          $thead = '<thead><tr><th>'. implode( '</th><th>', $row ) .'</th></tr></thead>';
+        } else {
+          $tbody[] = '<tr><td>' . implode( '</td><td>', $row ) . '</td></tr>';
+        }
+      }
+      $caption = ( ! empty( $args['caption'] ) )? '<caption>' . $args['caption'] . '</caption>' : '' ;
+      $return = '<table class="fancy table table-striped">' . $caption . $thead .'<tbody>' . implode( '', $tbody ) . '</tbody></table>';
+      if( true == $args['doshortcodes'] )
+        $return = \do_shortcode( $return );
+      break;
+
+    default:
+      // nothing
+      break;
+  }
+
+  return $return;
+}
+add_shortcode( 'include', __NAMESPACE__ . '\\include_file' );
+
+/**
  * Outputs the Product Selector table
  *
  * @param      array  $atts {
@@ -130,6 +193,19 @@ function product_selector( $atts ){
   return  $table_head . $cat_header . '<th style="width: 60%;">Description</th></tr></thead><tbody>' . implode( '', $rows ) . '</tbody></table>';
 }
 add_shortcode( 'productselector', __NAMESPACE__ . '\\product_selector' );
+
+/**
+ * Displays the Triad Representatives and Distributers table
+ */
+function reps_table(){
+  global $twig;
+
+  wp_enqueue_script( 'reps-and-dist' );
+
+  $context['reps_and_distributors'] = json_decode( file_get_contents( TS_XTRAS_DIR_PATH . 'lib/json/reps-and-distributors.json' ) );
+  return $twig->render( 'reps-and-distributors.twig', $context );
+}
+add_shortcode( 'reps_table', __NAMESPACE__ . '\\reps_table' );
 
 /**
  * Adds scroll offset JS.

@@ -1,0 +1,27 @@
+{% if reps_and_distributors is not empty %}
+<table id="reps-and-distributors" class="table table-striped">
+  <thead>
+    <tr>
+      <th>State/Province/County</th>
+      <th>Abbr</th>
+      <th>Representative/Distributor</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in reps_and_distributors %}
+    <tr>
+      <td>{{ row.region }}</td>
+      <td>{{ row.abbr }}</td>
+      <td>{{ row.contacts|shortcodes|raw }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>State/Province/County</th>
+      <th>Abbr</th>
+      <th>Representative/Distributor</th>
+    </tr>
+  </tfoot>
+</table>
+{% endif %}
