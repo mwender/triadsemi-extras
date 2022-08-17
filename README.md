@@ -2,7 +2,7 @@
 **Contributors:** TheWebist  
 **Requires at least:** 4.5  
 **Tested up to:** 5.5  
-**Stable tag:** 1.1.1  
+**Stable tag:** 1.2.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 **GitHub Plugin URI:** https://github.com/mwender/triadsemi-extras  
@@ -14,6 +14,9 @@ A companion plugin for the TriadSemi website.
 This plugin serves as a companion to the TriadSemi WordPress + Elementor website. I use this plugin to add features I'm unable to implement using Elementor/Elementor Pro.
 
 ## Changelog ##
+
+### 1.2.0 ###
+* Updating Twig library for PHP 8.0 compatiblity.
 
 ### 1.1.1 ###
 * Removing Oasis from reps table.
