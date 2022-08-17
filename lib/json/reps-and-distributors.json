@@ -62,7 +62,7 @@
   {
     "region": "Illinois",
     "abbr": "IL",
-    "contacts": "[include file=reps/rep_oasis-sales-corp]Territory: Northern IL<br /><br />[include file=reps/rep_triad]Territory: Southern IL"
+    "contacts": "[include file=reps/rep_triad]"
   },
   {
     "region": "Indiana",
@@ -242,7 +242,7 @@
   {
     "region": "Wisconsin",
     "abbr": "WI",
-    "contacts": "[include file=reps/rep_csc-mn]Territory: Western WI<br/><br />[include file=reps/rep_oasis-sales-corp]Territory: Eastern WI"
+    "contacts": "[include file=reps/rep_csc-mn]Territory: Western WI<br/><br />[include file=reps/rep_triad]Territory: Eastern WI"
   },
   {
     "region": "Wyoming",

@@ -8,7 +8,7 @@
  * Author URI:        https://mwender.com
  * Text Domain:       triadsemi-extras
  * Domain Path:       /languages
- * Version:           1.1.0
+ * Version:           1.1.1
  *
  * @package           Triadsemi_Extras
  */
